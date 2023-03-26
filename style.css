@@ -1,0 +1,267 @@
+@import url("stylesheet.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gotham Pro';
+}
+
+body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "header header"
+    "jumbotron jumbotron"
+    "about about"
+    "services services"
+    "news news"
+    "contact contact"
+    "footer footer";
+    background: rgb(245, 245, 245);
+}
+
+.header{
+    grid-area: header;
+    font-weight: 500;
+    width: 100%;
+    height: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    grid-template-areas: "logo menu1 numero";
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header a{
+    text-decoration: none;
+    color: rgb(42, 42, 42);
+    padding: 15px;
+}
+
+.header .menu a:hover{
+    color: rgb(245, 245, 245);
+    background: rgb(247, 188, 88);
+}
+
+.header .logo{
+    grid-area: logo;
+}
+
+.header .logo a{
+    font-weight: 550;
+}
+
+.header .menu{
+    grid-area: menu1;
+}
+
+.header .numero{
+    grid-area: numero;
+}
+
+.header .numero a{
+    font-weight: 550;
+}
+
+.jumbotron{
+    grid-area: jumbotron;
+    background-image: url("https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "vacio texto";
+}
+
+.jumbotron .vacio{
+    grid-area: vacio;
+}
+
+.jumbotron .text{
+    grid-area: texto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.jumbotron .text div{
+    background: rgba(245, 245, 245, .5);
+    width: 55%;
+    height: 45%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.jumbotron .text div h1{
+    font-size: 50px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.jumbotron .text div p{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.jumbotron .text div button{
+    width: 100px;
+    height: 35px;
+    border: none;
+    background: rgb(247, 188, 88);
+}
+
+.jumbotron .text div button a{
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.about{
+    grid-area: about;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: "titulo titulo"
+    "fechas imagen";
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.about .titulo-about{
+    grid-area: titulo;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.about .fechas{
+    grid-area: fechas;
+    width: 70%;
+    height: auto;
+    text-align: justify;
+}
+
+.about .imagen{
+    grid-area: imagen;
+    width:70%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about .imagen img{
+    width: 550px;
+    height: auto;
+    position: relative;
+    bottom: 350px;
+}
+
+.services{
+    grid-area: services;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "titulo"
+    "imagenes";
+    background: rgb(234, 234, 234);
+}
+
+.services .titulo-services{
+    grid-area: titulo;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.services .imagenes{
+    grid-area: imagenes;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.services .imagenes div{
+    overflow: hidden;
+    width: 350px;
+    height: 250px;
+    position: relative;
+}
+
+.services .imagenes div img{
+    width: 385px;
+    height: auto;
+}
+
+.services .imagenes .texto-imagen{
+    background: rgba(42, 42, 42, .5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.services .imagenes .texto-imagen h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.services .imagenes .texto-imagen h3 span{
+    font-size: 18px;
+    font-weight: 550;
+    color: rgb(247, 188, 88);
+}
+
+.services .imagenes .texto-imagen h2{
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.services .imagenes .texto-imagen p{
+    font-size: 14.5px;
+    font-weight: 400;
+}
+
+.news{
+    grid-area: news;
+}
+
+.contact{
+    grid-area: contact;
+}
+
+.footer{
+    grid-area: footer;
+}
