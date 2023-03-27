@@ -135,7 +135,7 @@ body{
     height: 500px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr, 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "titulo titulo"
     "fechas imagen";
     justify-items: center;
@@ -179,10 +179,10 @@ body{
 .services{
     grid-area: services;
     width: 100%;
-    height: 500px;
+    height: 420px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "titulo"
     "imagenes";
     background: rgb(234, 234, 234);
@@ -256,12 +256,238 @@ body{
 
 .news{
     grid-area: news;
+    display: grid;
+    width: 100%;
+    height: 500px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "titulo titulo"
+    "imagen texto";
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.news .titulo-news{
+    grid-area: titulo;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.news .imagen{
+    grid-area: imagen;
+    width: 70%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgb(247, 188, 88);
+    align-items: center;
+}
+
+.news .imagen .image{
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+.news .imagen .fecha{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(245, 245, 245);
+    justify-content: center;
+    align-items: center;
+}
+
+.news .imagen img{
+    width: 800px;
+    height: auto;
+    position: relative;
+    bottom: 185px;
+    right: 50px;
+}
+
+.news .texto-news{
+    grid-area: texto;
+    width: 70%;
+    height: auto;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.news .texto-news h5{
+    color: rgb(247, 188, 88);
 }
 
 .contact{
     grid-area: contact;
+    background: rgb(234, 234, 234);
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "titulo"
+    "formulario"
+    "gallery";
+    justify-items: center;
+    align-content: center;
+    padding-bottom: 50px;
+}
+
+.contact .titulo-contact{
+    grid-area: titulo;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.contact .formulario{
+    grid-area: formulario;
+    display: flex;
+    height: 80px;
+}
+
+.contact .formulario .email{
+    width: 450px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+}
+
+.contact .formulario .boton{
+    width: 120px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: rgb(247, 188, 88);
+    color: rgb(245, 245, 245);
+    font-weight: 500;
+    font-family: 'Gotham Pro';
+    cursor: pointer;
+}
+
+.contact .gallery{
+    grid-area: gallery;
+    width: 85%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact .gallery div{
+    width: 20%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.contact .gallery .img1{
+    width: auto;
+    height: 100%;
+    position: relative;
+    right: 0;
+}
+
+.contact .gallery .img2{
+    width: auto;
+    height: 100%;
+    position: relative;
+    right: 75px;
+}
+
+.contact .gallery .img3{
+    width: auto;
+    height: 100%;
+    position: relative;
+    right: 235px;
+}
+
+.contact .gallery .img4{
+    width: auto;
+    height: 100%;
+    position: relative;
+    right: 75px;
+}
+
+.contact .gallery .img5{
+    width: auto;
+    height: 100%;
+    position: relative;
+    right: 120px;
 }
 
 .footer{
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 30% 10% 25%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "derechos links contacto";
+    width: 100%;
+    height: 150px;
+    background: rgb(42, 42, 42);
+    color: rgb(245, 245, 245);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer .derechos{
+    grid-area: derechos;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .derechos p{
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.footer .links{
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .links a{
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-size: 14px;
+}
+
+.footer .contacto{
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .contacto p{
+    font-size: 14px;
+}
+
+.footer .contacto p span{
+    font-weight: 500;
 }
