@@ -186,6 +186,7 @@ body{
     grid-template-areas: "titulo"
     "imagenes";
     background: rgb(234, 234, 234);
+    padding-bottom: 50px;
 }
 
 .services .titulo-services{
