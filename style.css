@@ -579,6 +579,7 @@ body{
     }
 
     .contact .gallery{
+        height: 700px;
         flex-wrap: wrap;
     }
 
@@ -625,6 +626,95 @@ body{
     }
 }
 
-/* @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {  
+    .jumbotron .text div h1{
+        font-size: 30px;
+    }
 
-} */
+    .about .imagen{
+        width: 70%;
+        height: 250px;
+    }
+    
+    .about .imagen img{
+        width: 550px;
+        height: auto;
+        position: relative;
+        right: 50px;
+    }
+
+    .news{
+        height: 950px;
+    }
+
+    .contact{
+        width: 480px;
+        height: 700px;
+        padding-bottom: 0;
+    }
+    
+    .contact .titulo-contact{
+        width: 400px;
+        height: 80px;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .contact .formulario{
+        height: 80px;
+        width: 400px;
+    }
+    
+    .contact .gallery{
+        width: 100%;
+        height: 500px;
+        flex-direction: row;
+    }
+    
+    .contact .gallery div{
+        width: 25%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    
+    .contact .gallery .img1{
+        width: auto;
+        height: 100%;
+        position: relative;
+        right: 25px;
+    }
+    
+    .contact .gallery .img2{
+        width: auto;
+        height: 100%;
+        position: relative;
+        right: 82px;
+    }
+    
+    .contact .gallery .img3{
+        width: auto;
+        height: 100%;
+        position: relative;
+        right: 200px;
+    }
+    
+    .contact .gallery .img4{
+        width: auto;
+        height: 100%;
+        position: relative;
+        right: 95px;
+    }
+    
+    .contact .gallery .img5{
+        width: auto;
+        height: 100%;
+        position: relative;
+        right: 90px;
+    }
+
+    .footer{
+        height: 450px;
+        padding-top: 50px;
+    }
+}
